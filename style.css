@@ -1,0 +1,26 @@
+
+/* Div */
+
+.div-simon {
+    width: 250px;
+    height: 250px;
+    border: black solid 5px;
+    margin: 2%;
+}
+
+#red {
+    background-color: red;
+    cursor: pointer;
+}
+#green {
+    background-color: green;
+    cursor: pointer;
+}
+#yellow {
+    background-color: yellow;
+    cursor: pointer;
+}
+#blue {
+    background-color: blue;
+    cursor: pointer;
+}
