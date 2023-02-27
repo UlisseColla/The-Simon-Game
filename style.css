@@ -1,14 +1,22 @@
 
 :root{
-    --red: rgb(255, 90, 0);
-    --green: rgb(0, 223, 0);
-    --blue: rgb(0, 64, 254);
-    --yellow: rgb(252, 227, 0);
-    
-    --body: rgb(53, 31, 101);
     --white: rgb(244, 244, 244);
     --black: rgb(17, 17, 17);
     --dark-red: rgb(240, 30, 44);
+
+    --r-red: rgba(255, 87, 34, 0.5);
+    --r-yellow: rgba(255, 235, 59, 0.5);
+    --r-green: rgba(139, 195, 74, 0.5);
+    --r-blue: rgba(63, 81, 181, 0.5);
+
+    --r-red-flash: rgba(255, 87, 34, 1);
+    --r-yellow-flash: rgba(255, 235, 59, 1);
+    --r-green-flash: rgba(139, 195, 74, 1);
+    --r-blue-flash: rgba(63, 81, 181, 1);
+}
+
+.color-bl {
+    color: var(--black);
 }
 
 body{
@@ -18,7 +26,7 @@ body{
 }
 
 .div-simon {
-    width: 250px;
+    width: 35%;
     height: 250px;
     border: black solid 5px;
     margin: 2%;
@@ -26,18 +34,37 @@ body{
 }
 
 #red {
-    background-color: var(--red);
+    background-color: var(--r-red);
     cursor: pointer;
 }
 #green {
-    background-color: var(--green);
+    background-color: var(--r-green);
     cursor: pointer;
 }
 #yellow {
-    background-color: var(--yellow);
+    background-color: var(--r-yellow);
     cursor: pointer;
 }
 #blue {
-    background-color: var(--blue);
+    background-color: var(--r-blue);
     cursor: pointer;
+}
+
+.btn-mainsite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: 0.5s;
+}
+.btn-mainsite:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color:rgba(255, 255, 255, 0.7) ;
 }

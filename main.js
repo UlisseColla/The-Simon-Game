@@ -10,10 +10,10 @@ let divs = document.querySelectorAll('.div-simon');
 let check = true;
 
 /* Flash function */
-function flash (x, color) {
-    x.style.backgroundColor = "white";
+function flash (idEl, color) {
+    idEl.style.backgroundColor = "var(--r-" + color + "-flash)";
     setTimeout(() => {
-        x.style.backgroundColor = color;
+        idEl.style.backgroundColor = "var(--r-" + color + ")";
     }, 300)
 }
 
