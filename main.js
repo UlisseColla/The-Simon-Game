@@ -1,6 +1,8 @@
 let sequenceGame = [];
 let sequencePlayer = [];
 let level = 0;
+let body = document.querySelector('body');
+let start_level = document.querySelector('#start_level');
 
 let colors = ["red", "green", "blue", "yellow"];
 
@@ -21,35 +23,59 @@ function start(){
         if(check == true){
             createSequenceGame();
             console.log('game started');
+            body.style.backgroundColor = 'var(--black)';
         } 
     })
 }
 
+/* Restart */
+function restart(){
+    level = 0;
+    sequencePlayer = [];
+    sequenceGame = [];
+    check = true;
+}
+
 /* Compara sequenze */
 function checkAnswer(currentLevel){
-    if(sequenceGame[(currentLevel - 1)] == sequencePlayer[(currentLevel - 1)] && sequenceGame.length == sequencePlayer.length){
+
+    if(sequenceGame[currentLevel] === sequencePlayer[currentLevel]){
+        if(sequenceGame.length === sequencePlayer.length){
         console.log('success');
-        console.log(sequenceGame[(currentLevel - 1)]);
-        console.log(sequencePlayer[(currentLevel - 1)]);
         setTimeout(()=>{
-            sequencePlayer = [];
             createSequenceGame();
-        },1000)
+        },1000)}
     } else {
         console.log('wrong');
+        body.style.backgroundColor = 'var(--dark-red)';
+        start_level.innerHTML = "Game Over, press any key to restart the game";
+        restart();
     }
 }
 
 /* Sequenza gioco */
 function createSequenceGame(){
-    let randomColor = colors[Math.round(Math.random() * (3 - 0) + 0)];
+    sequencePlayer = [];
+    level++;
+    let randomColor = colors[Math.floor(Math.random() * 4)];
     let colorFlash = document.getElementById(randomColor);
     
     sequenceGame.push(randomColor);
+    
+    switch(level){
+        case 10: 
+        start_level.innerHTML = "Level " + level + ", very good, keep going...";
+        break;
+        case 20: 
+        start_level.innerHTML = "Level " + level + ", impressive!";
+        break;
+        default:
+        start_level.innerHTML = "Level " + level ;
+    }
+
     flash(colorFlash, randomColor);
     console.log(sequenceGame);
     check = false;
-    level++;
 }
 
 /* GIOCO */
@@ -63,14 +89,12 @@ divs.forEach((item, i) => {
             console.log(sequencePlayer);
             
             if(check == false){
-                if(sequenceGame.length == sequencePlayer.length){
-                    checkAnswer(level);
-                    console.log(level);
-                }
+                checkAnswer(sequencePlayer.length - 1);
             }
         }
     })
 })
+
 
 
 

@@ -1,26 +1,43 @@
 
-/* Div */
+:root{
+    --red: rgb(255, 90, 0);
+    --green: rgb(0, 223, 0);
+    --blue: rgb(0, 64, 254);
+    --yellow: rgb(252, 227, 0);
+    
+    --body: rgb(53, 31, 101);
+    --white: rgb(244, 244, 244);
+    --black: rgb(17, 17, 17);
+    --dark-red: rgb(240, 30, 44);
+}
+
+body{
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Press Start 2P', cursive;
+}
 
 .div-simon {
     width: 250px;
     height: 250px;
     border: black solid 5px;
     margin: 2%;
+    border-radius: 20px;
 }
 
 #red {
-    background-color: red;
+    background-color: var(--red);
     cursor: pointer;
 }
 #green {
-    background-color: green;
+    background-color: var(--green);
     cursor: pointer;
 }
 #yellow {
-    background-color: yellow;
+    background-color: var(--yellow);
     cursor: pointer;
 }
 #blue {
-    background-color: blue;
+    background-color: var(--blue);
     cursor: pointer;
 }
