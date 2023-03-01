@@ -90,7 +90,30 @@ function checkAnswer(currentLevel){
         })
     })
     
+    /* Regole */
     
+    let check_rules = true; 
+    let btn_rules = document.querySelector('.btn-rules');
+    let btn_dismiss = document.querySelector('.btn-dismiss');
+    let rules = document.querySelector('.modale-regole-wrapper');
+
+    btn_rules.addEventListener('click', () => {
+        if(check_rules){
+            rules.classList.toggle('d-none');
+            check_rules = false;
+        } else {
+            rules.classList.toggle('d-none');
+            check_rules = true;
+        }
+    })
+
+    btn_dismiss.addEventListener('click', () => {
+        if(!check_rules){
+            rules.classList.toggle('d-none');
+            check_rules = true;
+        } 
+    })
+
     
     
     

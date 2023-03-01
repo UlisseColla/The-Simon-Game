@@ -15,10 +15,35 @@
 </head>
 <body>
     
-    <a href="https://mywebsite.ulisse-colla.it/" class="btn-mainsite">
+    <!-- Home -->
+    <a href="https://mywebsite.ulisse-colla.it/" class="btn-mainsite" title="Back to main site">
         <i class="fa-solid fa-house color-bl"></i>
     </a>
+    <!-- Regole -->
+    <div class="btn-rules" title="Rules of the game">
+        <i class="fa-solid fa-info color-bl"></i>
+    </div>
     
+    <!-- Modale regole -->
+    <div class="modale-regole-wrapper d-none">
+        <div class="regole-div text-center">
+            <p>The Game will start after pressing any key. It will show a sequence by flashing a square.
+            </p>
+            <p>After any flash click on the square that lighted up plus the previous ones to reproduce the sequence showed by the game. </p>
+            <p>Example:</p>
+            <p>Level 1: flash on the red square -> press on the red one.</p>
+            <p>Level 2: flash on the green square -> press on the red, then the green one.</p>
+            <p>Level 3: flash on the yellow square -> press on the red, the green and then the yellow...</p>
+            <p>Level 4: ...</p>
+
+
+            <div class="btn-dismiss">
+                dismiss
+            </div>
+        </div>
+    </div>
+
+
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 text-center">

@@ -51,6 +51,7 @@ body{
 }
 
 .btn-mainsite {
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,4 +68,57 @@ body{
     cursor: pointer;
     transform: scale(1.1);
     background-color:rgba(255, 255, 255, 0.7) ;
+}
+
+.btn-rules {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 60px;
+    left: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: 0.5s;
+}
+.btn-rules:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color:rgba(255, 255, 255, 0.7) ;
+}
+
+.modale-regole-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+.regole-div {
+    width: 50%;
+}
+
+@media screen and (max-width: 610px){
+    .regole-div {
+        width: 100%; 
+        padding: 20px;
+    }
+}
+
+.btn-dismiss {
+    padding: 20px;
+    border: 1px solid var(--white);
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.btn-dismiss:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color:rgba(255, 255, 255, 0.3) ;
 }
