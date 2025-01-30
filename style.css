@@ -50,32 +50,12 @@ body{
     cursor: pointer;
 }
 
-.btn-mainsite {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.3);
-    transition: 0.5s;
-}
-.btn-mainsite:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-    background-color:rgba(255, 255, 255, 0.7) ;
-}
-
 .btn-rules {
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 60px;
+    top: 10px;
     left: 10px;
     height: 40px;
     width: 40px;
